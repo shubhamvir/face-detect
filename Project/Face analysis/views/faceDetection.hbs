@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>{{title}}</title>
+
+  <link rel="stylesheet" href="assets/css/maicons.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <style>
+    canvas {
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin:auto;
+    }
+  </style>
+
+  <script defer src="face-api.min.js"></script>
+  <script>
+  function load()
+  {
+        document.getElementById('load').innerHTML='Loading Image...';
+  }
+  </script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+      <div class="container">
+        <a href="/" class="navbar-brand">Face<span class="text-primary">Analysis.</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faceDetection/">Face Detection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faceExpression/">Face Expression Detection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ageAndGender/">Age & Gender Detection</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <script defer src="facedetection.js"></script>
+  <center>
+   <div id="uploads">
+      <input type="file" id="imageUpload" oninput="load()" class="btn btn-success" accept=".jpg, .jpeg, .JPG, .png">
+      <br>
+      <div id='load'></div>
+   </div>
+  </center>  
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="mt-auto page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
+  <div class="container">
+    <p class="text-center" id="copyright">Copyright &copy; 2022. The project is designed by Shubham Virkar & Team <a href="#" target="_blank"></a></p>
+  </div>
+</footer>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/wow/wow.min.js"></script>
+<script src="assets/js/theme.js"></script>
+</html>
